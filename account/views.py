@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.contrib.auth import views as auth_view
+
 
 # Create your views here.
-def f(request):
-    return render(request, template_name="index.html")
+class CustomLogin(auth_view.LoginView):
+    template_name = 'pages/samples/login.html'
