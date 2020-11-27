@@ -12,3 +12,6 @@ def dashboard(request):
 class CustomLogin(auth_view.LoginView):
     template_name = 'pages/samples/login.html'
 
+
+class CustomLogout(auth_view.LoginView):
+    template_name = 'pages/samples/login.html'
