@@ -15,3 +15,8 @@ class CustomLogin(auth_view.LoginView):
 
 class CustomLogout(auth_view.LoginView):
     template_name = 'pages/samples/login.html'
+
+
+@login_required
+def settings(request):
+    return render(request, 'pages/forms/settings.html')
