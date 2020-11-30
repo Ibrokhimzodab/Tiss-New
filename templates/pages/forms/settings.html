@@ -103,7 +103,7 @@
                 <li class="nav-item"> <a class="nav-link" href="../samples/..error-404.html"> 404 </a></li>
                 <li class="nav-item"> <a class="nav-link" href="../samples/..error-500.html"> 500 </a></li>
                 <li class="nav-item"> <a class="nav-link" href="../samples/..login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../samples/..register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'register' %}"> Register </a></li>
               </ul>
             </div>
           </li>
@@ -319,53 +319,27 @@
               <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-<<<<<<< HEAD
-                    <h4 class="card-title">Basic form elements</h4>
-                    <p class="card-description"> Basic form elements </p>
+                    <h4 class="card-title"> Edit your account</h4>
+                    <p class="card-description"> Edit your account </p>
                     <form action="." method="post" class="forms-sample">
-                      <div class="form-group">
-                        <label for="exampleInputName1">Name</label>
-                        <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputEmail3">Email address</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword4">Password</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectGender">Gender</label>
-                        <select class="form-control" name="gender" id="exampleSelectGender">
-                          <option>Male</option>
-                          <option>Female</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-=======
-                    <h4 class="card-title">Create a new account</h4>
-                    <p class="card-description"> Create a new account </p>
-                    <form class="forms-sample">
 						<div class="form-group">
 							<label for="exampleInputName1">Username</label>
-							<input type="text" class="form-control" id="exampleInputName1" placeholder="Username">
+							<input type="text" name="username" class="form-control" id="exampleInputName1" placeholder="Username">
 						  </div>
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <input type="text" name="first_name" class="form-control" id="exampleInputName1" placeholder="Name">
 					  </div>
 					  <div class="form-group">
 						<label for="exampleInputName1">Surname</label>
-						<input type="text" class="form-control" id="exampleInputName1" placeholder="Surname">
+						<input type="text" name="last_name" class="form-control" id="exampleInputName1" placeholder="Surname">
 					  </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
 					  </div>
 					  <div class="form-group">
->>>>>>> 02a65f3afbd389fd85a85b6e03a305570a4b3795
-                        <label>File upload</label>
+                        <label>Upload Image</label>
                         <input type="file" name="img[]" class="file-upload-default">
                         <div class="input-group col-xs-12">
                           <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
@@ -375,21 +349,12 @@
                         </div>
                       </div>
                       <div class="form-group">
-<<<<<<< HEAD
-                        <label for="exampleInputCity1">City</label>
-                        <input type="text" name="city" class="form-control" id="exampleInputCity1" placeholder="Location">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleTextarea1">Textarea</label>
-                        <textarea class="form-control" name="text" id="exampleTextarea1" rows="4"></textarea>
-=======
                         <label for="exampleInputPassword4">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
 					  </div>
 					  <div class="form-group">
                         <label for="exampleInputPassword4">Confirm Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
->>>>>>> 02a65f3afbd389fd85a85b6e03a305570a4b3795
+                        <input type="password" name="password2" class="form-control" id="exampleInputPassword4" placeholder="Password">
                       </div>
                         {% csrf_token %}
                       <input type="submit" class="btn btn-primary mr-2" value="Submit">
