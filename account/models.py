@@ -2,6 +2,9 @@ from django.db import models
 
 
 # Create your models here.
+from tiss_main import settings
+
+
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     last_name = models.CharField(max_length=32)

@@ -378,22 +378,22 @@
                   <div class="card-body">
                     <h4 class="card-title">Basic form elements</h4>
                     <p class="card-description"> Basic form elements </p>
-                    <form class="forms-sample">
+                    <form action="." method="post" class="forms-sample">
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword4">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
                       </div>
                       <div class="form-group">
                         <label for="exampleSelectGender">Gender</label>
-                        <select class="form-control" id="exampleSelectGender">
+                        <select class="form-control" name="gender" id="exampleSelectGender">
                           <option>Male</option>
                           <option>Female</option>
                         </select>
@@ -410,14 +410,15 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputCity1">City</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+                        <input type="text" name="city" class="form-control" id="exampleInputCity1" placeholder="Location">
                       </div>
                       <div class="form-group">
                         <label for="exampleTextarea1">Textarea</label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        <textarea class="form-control" name="text" id="exampleTextarea1" rows="4"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                      <button class="btn btn-dark">Cancel</button>
+                        {% csrf_token %}
+                      <input type="submit" class="btn btn-primary mr-2" value="Submit">
+                      <input type="submit" class="btn btn-dark" value="Cancel">
                     </form>
                   </div>
                 </div>
