@@ -25,8 +25,8 @@
       <!-- partial:../../partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="../../index.html"><div class="tiss-logo">Tiss</div></a>
-          <a class="sidebar-brand brand-logo-mini" href="../../index.html"><div class="tiss-logo">T</div></a>
+          <a class="sidebar-brand brand-logo" href="../../user-page.html"><div class="tiss-logo">Tiss</div></a>
+          <a class="sidebar-brand brand-logo-mini" href="../../user-page.html"><div class="tiss-logo">T</div></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -82,7 +82,7 @@
             <span class="nav-link">Navigation</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../index.html">
+            <a class="nav-link" href="../../user-page.html">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
@@ -96,7 +96,7 @@
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="../../index.html"><div class="tiss-logo">T</div></a>
+            <a class="navbar-brand brand-logo-mini" href="../../user-page.html"><div class="tiss-logo">T</div></a>
           </div>
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -289,42 +289,30 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="page-header">
-              <h3 class="page-title"> Form elements </h3>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
-                </ol>
-              </nav>
-            </div>
             <div class="row">
               <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Basic form elements</h4>
-                    <p class="card-description"> Basic form elements </p>
+                    <h4 class="card-title">Settings</h4>
+                    <p class="card-description"> Settings </p>
                     <form class="forms-sample">
+						<div class="form-group">
+							<label for="exampleInputName1">Username</label>
+							<input type="text" class="form-control" id="exampleInputName1" placeholder="Username">
+						  </div>
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                      </div>
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputName1">Surname</label>
+						<input type="text" class="form-control" id="exampleInputName1" placeholder="Surname">
+					  </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword4">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectGender">Gender</label>
-                        <select class="form-control" id="exampleSelectGender">
-                          <option>Male</option>
-                          <option>Female</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
+					  </div>
+					  <div class="form-group">
                         <label>File upload</label>
                         <input type="file" name="img[]" class="file-upload-default">
                         <div class="input-group col-xs-12">
@@ -335,12 +323,12 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputCity1">City</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleTextarea1">Textarea</label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        <label for="exampleInputPassword4">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+					  </div>
+					  <div class="form-group">
+                        <label for="exampleInputPassword4">Confirm Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
                       </div>
                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
                       <button class="btn btn-dark">Cancel</button>
