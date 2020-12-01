@@ -37,7 +37,7 @@
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Fayziev O.</h5>
+                  <h5 class="mb-0 font-weight-normal">{{ user.first_name }}+{{ user.last_name }}</h5>
                   <span>Silver Member</span>
                 </div>
               </div>
@@ -263,7 +263,7 @@
                     <form class="forms-sample">
 						<div class="form-group">
 							<label for="exampleInputName1">Username</label>
-							<input type="text" class="form-control" id="exampleInputName1" placeholder="Username">
+							<input type="text" class="form-control" id="exampleInputName1" placeholder="Username" value={{ user.username }}>
 						  </div>
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
@@ -275,7 +275,7 @@
 					  </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" value={{ user.username }}>
 					  </div>
 					  <div class="form-group">
                         <label>File upload</label>
