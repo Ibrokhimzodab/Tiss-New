@@ -234,7 +234,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="../../assets/images/faces/face_pirnazarov.jpg" alt="face">
+                    <img class="img-xs rounded-circle" src="{% if user.profile.image.image.url %}{{ user.profile.image.image.url }} {% else %}/../../assets/images/faces/face_pirnazarov.jpg{% endif %}" alt="face">
                     <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ user.profile.first_name }} {{ user.profile.last_name }}</p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
@@ -302,7 +302,7 @@
 					  </div>
 					  <div class="form-group">
                         <label>Upload Image</label>
-                        <input type="file" name="photo" class="file-upload-default">
+                        <input type="file" name="photo" class="file-upload-default" value="{{ user.profile.image.image.url }}">
                         <div class="input-group col-xs-12">
                           <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
                           <span class="input-group-append">

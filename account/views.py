@@ -22,6 +22,22 @@ class CustomLogout(auth_view.LogoutView):
     template_name = 'pages/samples/login.html'
 
 
+class CustomPasswordResetView(auth_view.PasswordResetView):
+    template_name = 'pages/samples/password_reset_form.html'
+
+
+class CustomPasswordResetDoneView(auth_view.PasswordResetDoneView):
+    template_name = 'pages/samples/password_reset_email.html'
+
+
+class CustomPasswordResetConfirmView(auth_view.PasswordResetConfirmView):
+    template_name = 'pages/samples/password_reset_form.html'
+
+
+class CustomPasswordResetCompleteView(auth_view.PasswordResetCompleteView):
+    template_name = 'pages/samples/password_reset_form.html'
+
+
 @login_required
 def settings(request):
     if request.method == 'POST':
