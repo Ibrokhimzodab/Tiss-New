@@ -8,8 +8,8 @@ urlpatterns = [
     path('', views.dashboard, name='dashboard'),
     path('settings/', views.settings, name='settings'),
     path('register/', views.register, name='register'),
-    path('password_reset/', views.CustomPasswordResetView, name='password_reset'),
-    path('password_reset/done', views.CustomPasswordResetDoneView, name='password_reset_done'),
-    path('reset/<uidb64>/<token>/', views.CustomPasswordResetConfirmView, name='password_reset_confirm'),
-    path('reset/done/', views.CustomPasswordResetConfirmView, name='password_reset_complete'),
+    path('password_reset/', views.CustomPasswordResetView.as_view(), name='password_reset_form'),
+    path('password_reset/done', views.CustomPasswordResetDoneView.as_view(), name='password_reset_done'),
+    path('reset/<uidb64>/<token>/', views.CustomPasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset/done/', views.CustomPasswordResetConfirmView.as_view(), name='password_reset_complete'),
 ]

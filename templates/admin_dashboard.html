@@ -35,10 +35,10 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="{% if user.profile.image.image.url %}{{ user.profile.image.image.url }} {% else %}assets/images/faces/face_pirnazarov.jpg{% endif %}" alt="face">
-                  <span class="count bg-success"></span>
+                    <img class="img-xs rounded-circle " src="{{ user.profile.image.url }}" alt="face">
+                    <span class="count bg-success"></span>
                 </div>
-                <div class="profile-name">
+                  <div class="profile-name">
                   <h5 class="mb-0 font-weight-normal">{{ user.profile.first_name }} {{ user.profile.last_name }}</h5>
                   <span>Gold Member</span>
                 </div>

@@ -27,15 +27,15 @@ class CustomPasswordResetView(auth_view.PasswordResetView):
 
 
 class CustomPasswordResetDoneView(auth_view.PasswordResetDoneView):
-    template_name = 'pages/samples/password_reset_email.html'
+    template_name = 'pages/samples/password_reset_done.html'
 
 
 class CustomPasswordResetConfirmView(auth_view.PasswordResetConfirmView):
-    template_name = 'pages/samples/password_reset_form.html'
+    template_name = 'pages/samples/password_reset_confirm.html'
 
 
 class CustomPasswordResetCompleteView(auth_view.PasswordResetCompleteView):
-    template_name = 'pages/samples/password_reset_form.html'
+    template_name = 'pages/samples/password_reset_complete.html'
 
 
 @login_required
