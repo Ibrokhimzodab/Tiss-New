@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,12 +34,12 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="../../assets/images/faces/face_pirnazarov.jpg" alt="face">
+                  <img class="img-xs rounded-circle " src="../../assets/images/faces/face_fayziev.jpg" alt="face">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
                   <h5 class="mb-0 font-weight-normal">{{ user.profile.first_name }} {{ user.profile.last_name }}</h5>
-                  <span>Gold Member</span>
+                  <span>Silver Member</span>
                 </div>
               </div>
             </div>
@@ -52,28 +53,6 @@
                 <i class="mdi mdi-speedometer"></i>
               </span>
               <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <span class="menu-icon">
-                <i class="mdi mdi-security"></i>
-              </span>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{% url 'register' %}"> Register a new account </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-file-document-box"></i>
-              </span>
-              <span class="menu-title">Documentation</span>
             </a>
           </li>
         </ul>
@@ -234,8 +213,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="../../assets/images/faces/face_pirnazarov.jpg" alt="face">
-                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Pirnazarov M.</p>
+                    <img class="img-xs rounded-circle" src="../../assets/images/faces/face_fayziev.jpg" alt="face">
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ user.profile.first_name }} {{ user.profile.last_name }}</p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
                 </a>
@@ -280,28 +259,27 @@
               <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title"> Edit your account</h4>
-                    <p class="card-description"> Edit your account </p>
-                    <form action="." method="post" class="forms-sample">
+                    <h4 class="card-title">Settings</h4>
+                    <p class="card-description"> Settings </p>
+                    <form class="forms-sample">
 						<div class="form-group">
 							<label for="exampleInputName1">Username</label>
-							<input type="text" name="username" class="form-control" id="exampleInputName1" placeholder="Username"
-                                   value={{ user.username }}>
+							<input type="text" class="form-control" id="exampleInputName1" placeholder="Username" value={{ user.username }}>
 						  </div>
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
-                        <input type="text" name="first_name" class="form-control" id="exampleInputName1" placeholder="Name" value={{ user.profile.first_name }}>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" value={{ user.profile.first_name }}>
 					  </div>
 					  <div class="form-group">
 						<label for="exampleInputName1">Surname</label>
-						<input type="text" name="last_name" class="form-control" id="exampleInputName1" placeholder="Surname" value={{ user.profile.last_name }}>
+						<input type="text" class="form-control" id="exampleInputName1" placeholder="Surname" value={{ user.profile.last_name }}>
 					  </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Email address</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail3" placeholder="Email" value={{ user.email }}>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" value={{ user.email }}>
 					  </div>
 					  <div class="form-group">
-                        <label>Upload Image</label>
+                        <label>File upload</label>
                         <input type="file" name="img[]" class="file-upload-default">
                         <div class="input-group col-xs-12">
                           <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
@@ -312,15 +290,14 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword4">Password</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
 					  </div>
 					  <div class="form-group">
                         <label for="exampleInputPassword4">Confirm Password</label>
-                        <input type="password" name="password2" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
                       </div>
-                        {% csrf_token %}
-                      <input type="submit" class="btn btn-primary mr-2" value="Submit">
-                      <input type="submit" class="btn btn-dark" value="Cancel">
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                      <button class="btn btn-dark">Cancel</button>
                     </form>
                   </div>
                 </div>

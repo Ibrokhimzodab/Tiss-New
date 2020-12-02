@@ -9,7 +9,9 @@ from django.contrib import messages
 # Create your views here.
 @login_required
 def dashboard(request):
-    return render(request, 'index.html')
+    if request.user.is_superuser and request.user.is_staff:
+        return render(request, 'admin_dashboard.html')
+    return render(request, 'user_dashboard.html')
 
 
 class CustomLogin(auth_view.LoginView):
@@ -31,9 +33,12 @@ def settings(request):
             messages.success(request, 'Profile updated successfully')
         else:
             messages.error(request, 'Error updating profile')
-    return render(request, 'pages/forms/settings.html')
+    if request.user.is_superuser and request.user.is_staff:
+        return render(request, 'pages/forms/admin_settings.html')
+    return render(request, 'pages/forms/user_settings.html')
 
 
+@login_required()
 def register(request):
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)

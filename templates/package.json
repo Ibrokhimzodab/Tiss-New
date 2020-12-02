@@ -2,7 +2,7 @@
   "name": "corona_admin",
   "version": "2.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "admin_dashboard.html",
   "dependencies": {
     "@mdi/font": "^3.7.95",
     "bootstrap": "^4.4.1",
