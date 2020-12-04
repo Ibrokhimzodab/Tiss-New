@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+    {% for task in tasks.sub_tasks.values %}
+        <p>{{ task.name }}</p>
+        <ul>
+        <li>{{ task.id }}</li>
+        <li>{{ task.name }}</li>
+        <li>{{ task.parent }}</li>
+        <li>{{ task.status.status }}</li>
+        {% if task.subtasks %}
+            <ul>
+                {% for subtask in task.subtasks %}
+                    <li>{{ subtask.name }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        </ul>
+        <br>
+    {% endfor %}
+    </ul>
+</body>
+</html>

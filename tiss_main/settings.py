@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -25,13 +24,13 @@ SECRET_KEY = 'hp-n7pqnd41l4pl2#8!6z03l$qrt%%4db*h0=r#76ngpjpk*0e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
+    'clickup.apps.ClickupConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,7 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tiss_main.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -80,7 +78,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -100,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -114,7 +110,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -127,5 +122,9 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = ''
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# ClickUp set up
+CLICK_UP_CLIENT_ID = 'YZO9DVYTFUT6CXU1QEVORF4RPIHJB76U'
+CLICK_UP_CLIENT_SECRET = 'PFZ66FATQFV17JBRQ1CG28CV2BXDF8U9GVXIKFI87QRJNU5CBEWHG6LK6ACZ51M4'
