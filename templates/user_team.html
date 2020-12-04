@@ -137,38 +137,36 @@
 				<div class="col-12 grid-margin">
 				  <div class="card">
 					<div class="card-body">
-						<h4 class="card-title">To Do List</h4>
-						<div class="table-responsive">
-						  <table class="table">
-							<thead>
-							  <tr>
-								<th> Task Name </th>
-								<th> Parent Task </th>
-								<th> Link </th>
-								<th> Status </th>
-								<!-- <th> Start Date </th>
-								<th> Payment Status </th> -->
-							  </tr>
-							</thead>
-							<tbody>
-							  <tr>
-								<td> Color the walls </td>
-								<td> None </td>
-								<td> <a href="http://vk.com/">Go to</a> </td>
-								<td>
-								  <div color="#00ff00" class="badge" id="colored">Approved</div>
-								</td>
-							  </tr>
-							  <tr>
-								<td> Smell the balls </td>
-								<td> <a href="http://ok.ru/">Go to</a> </td>
-								<td> None </td>
-								<td>
-								  <div color="#FFA500" class="badge" id="colored">Pending</div>
-								</td>
-							  </tr>
-							</tbody>
-						  </table>
+						<h4 class="card-title">Choose active team</h4>
+						<div class="row team-wrapper">
+							<style>
+								.team-wrapper {
+									display: flex;
+								}
+								.team {
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+								}
+								.team-photo img {
+									width: 100px;
+									height: 100px;
+									border-radius: 50%;
+									border: 1px solid white;
+									margin-bottom: 1.125rem;;
+								}
+								.team-photo:hover {
+									-webkit-transform: scale(1.2);
+									-ms-transform: scale(1.2);
+									transform: scale(1.2);
+								}
+							</style>
+							<div class="col team">
+								<div class="team-photo">
+									<img src="assets/images/faces/face_pirnazarov.jpg" alt="face">
+								</div>
+								<div class="team-name">Team 1</div>
+							</div>							
 						</div>
 					  </div>
 				  </div>

@@ -6,5 +6,5 @@ window.addEventListener('DOMContentLoaded', () => {
 		block[i].style.color = block[i].getAttribute("color");
 		block[i].style.border = block[i].getAttribute("color") + " 1px solid";
 	}
-	
+
 });

@@ -98,44 +98,6 @@
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">Generate PDF</a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
-                  <h6 class="p-3 mb-0">Projects</h6>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-file-outline text-primary"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Software Development</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-web text-info"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">UI Development</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-layers text-danger"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Software Testing</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">See all projects</p>
-                </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
@@ -217,14 +179,6 @@
                           </span>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword4">Password</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-					  </div>
-					  <div class="form-group">
-                        <label for="exampleInputPassword4">Confirm Password</label>
-                        <input type="password" name="password2" class="form-control" id="exampleInputPassword4" placeholder="Password">
-                      </div>
                         {% csrf_token %}
                       <input type="submit" class="btn btn-primary mr-2" value="Submit">
                       <input type="submit" class="btn btn-dark" value="Cancel">
@@ -232,7 +186,25 @@
                   </div>
                 </div>
               </div>
-            </div>
+			</div>
+			<div class="row">
+				<div class="col-12 grid-margin stretch-card">
+				  <div class="card">
+					<div class="card-body">
+					  <h4 class="card-title">Link ClickUp</h4>
+					  <div class="card-forms"> <style>.card-forms{ display: flex; }
+						  </style>
+						<form action="../../admin_team.html">
+							<input type="submit" class="btn btn-primary mr-2" value="Link">
+						</form>
+						<form action="#">
+							<input type="submit" class="btn btn-dark" value="Unlink">
+						</form>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
