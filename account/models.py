@@ -16,10 +16,20 @@ class Profile(models.Model):
         return 'Profile for user {}'.format(self.user.username)
 
     def save(self, *args, **kwargs):
-        old_photo = Profile.objects.get(pk=self.pk).photo
-        if old_photo:
+        try:
+            old_photo = Profile.objects.get(pk=self.pk).photo
+        except Profile.DoesNotExist:
+            old_photo = None
+
+        if old_photo and old_photo != self.photo:
             try:
                 os.remove(old_photo.path)
             except FileNotFoundError:
                 pass
         super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        photo_path = self.photo.path
+        super(Profile, self).delete(*args, **kwargs)
+        if photo_path:
+            os.remove(photo_path)

@@ -46,10 +46,14 @@ class CustomPasswordResetCompleteView(auth_view.PasswordResetCompleteView):
 @login_required
 def settings(request):
     if request.method == 'POST':
+        try:
+            Profile.objects.get(user=request.user)
+        except Profile.DoesNotExist:
+            Profile.objects.create(user=request.user)
+
         user_form = UserEditForm(instance=request.user, data=request.POST)
         profile_form = ProfileEditForm(instance=request.user.profile, data=request.POST, files=request.FILES)
         if user_form.is_valid() and profile_form.is_valid():
-            print(request.FILES)
             user_form.save()
             profile_form.save()
             messages.success(request, 'Profile updated successfully')
