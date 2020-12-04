@@ -20,7 +20,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('account.urls'))
+    path('', include('account.urls')),
+    path('clickup/', include('clickup.urls'))
 ]
+
+handler404 = 'account.views.custom_404'
+handler500 = 'account.views.custom_500'
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
